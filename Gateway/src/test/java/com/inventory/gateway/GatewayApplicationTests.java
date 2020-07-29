@@ -1,4 +1,4 @@
-package com.iaito.gateway;
+package com.inventory.gateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.iaito.gateway;
+package com.inventory.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

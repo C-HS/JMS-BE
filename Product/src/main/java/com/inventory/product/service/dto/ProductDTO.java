@@ -1,4 +1,4 @@
-package com.iaito.product.service.dto;
+package com.inventory.product.service.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

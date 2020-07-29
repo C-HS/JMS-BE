@@ -1,8 +1,8 @@
-package com.iaito.product.service.controller;
+package com.inventory.product.service.controller;
 
 import java.util.List;
 
-import javax.validation.Valid;
+//import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.iaito.product.service.dto.ProductDTO;
-import com.iaito.product.service.model.Product;
-import com.iaito.product.service.service.ProductService;
+import com.inventory.product.service.dto.ProductDTO;
+import com.inventory.product.service.model.Product;
+import com.inventory.product.service.service.ProductService;
 
 @RestController
 public class ProductController {
@@ -35,11 +35,11 @@ public class ProductController {
 		return ResponseEntity.ok(productService.getAllProducts());
 	}
 	@PostMapping(value = "/addProduct", consumes = "application/json", produces = "application/json")
-	public ResponseEntity<ProductDTO> addProduct(@Valid @RequestBody Product product) {
+	public ResponseEntity<ProductDTO> addProduct(@RequestBody Product product) {
 		return ResponseEntity.ok(productService.addProduct(product));
 	}
 	@PutMapping(value = "/updateProduct", consumes = "application/json", produces = "application/json")
-	public ResponseEntity<ProductDTO> updateProduct(@Valid @RequestBody Product product) {
+	public ResponseEntity<ProductDTO> updateProduct(@RequestBody Product product) {
 		return ResponseEntity.ok(productService.updateProduct(product));
 	}
 	@DeleteMapping(value = "/deleteProduct/{productId}",produces = "application/json")

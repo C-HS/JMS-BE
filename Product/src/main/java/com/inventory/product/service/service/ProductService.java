@@ -1,9 +1,9 @@
-package com.iaito.product.service.service;
+package com.inventory.product.service.service;
 
 import java.util.List;
 
-import com.iaito.product.service.dto.ProductDTO;
-import com.iaito.product.service.model.Product;
+import com.inventory.product.service.dto.ProductDTO;
+import com.inventory.product.service.model.Product;
 
 public interface ProductService {
 	public ProductDTO getProduct(long productId);

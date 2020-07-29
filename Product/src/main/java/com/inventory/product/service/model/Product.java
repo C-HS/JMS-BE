@@ -1,4 +1,4 @@
-package com.iaito.product.service.model;
+package com.inventory.product.service.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

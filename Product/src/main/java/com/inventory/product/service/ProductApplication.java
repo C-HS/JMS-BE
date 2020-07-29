@@ -1,4 +1,4 @@
-package com.iaito.product.service;
+package com.inventory.product.service;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;

@@ -1,8 +1,8 @@
-package com.iaito.product.service.repository;
+package com.inventory.product.service.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.iaito.product.service.model.Product;
+import com.inventory.product.service.model.Product;
 
 
 @Repository

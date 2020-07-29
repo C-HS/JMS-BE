@@ -1,4 +1,4 @@
-package com.iaito.product.service.service.impl;
+package com.inventory.product.service.service.impl;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,10 +9,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.iaito.product.service.dto.ProductDTO;
-import com.iaito.product.service.model.Product;
-import com.iaito.product.service.repository.ProductRepository;
-import com.iaito.product.service.service.ProductService;
+import com.inventory.product.service.dto.ProductDTO;
+import com.inventory.product.service.model.Product;
+import com.inventory.product.service.repository.ProductRepository;
+import com.inventory.product.service.service.ProductService;
 @Service
 public class ProductServiceImpl implements ProductService {
 	Logger logger = LoggerFactory.getLogger(ProductServiceImpl.class);
