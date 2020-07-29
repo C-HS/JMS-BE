@@ -1,5 +1,5 @@
-# JMS-BE
-**Use the followingcommand to run the particular service**
-mvn spring-boot:run -pl IMSDiscovery__
-mvn spring-boot:run -pl Gateway__
-mvn spring-boot:run -pl Product__
+# JMS-BE<br/>
+**Use the followingcommand to run the particular service**<br/>
+mvn spring-boot:run -pl IMSDiscovery<br/>
+mvn spring-boot:run -pl Gateway<br/>
+mvn spring-boot:run -pl Product<br/>
