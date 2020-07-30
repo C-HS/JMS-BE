@@ -17,13 +17,14 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "Catalog")
-public class Catalog {
-    @Id
+@Table(name = "Category")
+public class Category {
+	
+	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "catalog_id")
-	private long catalogId;
-	@Column(name = "catalog_name")
-	private String catalogName;
-    
+	@Column(name = "category_id")
+	private long categoryId;
+	@Column(name = "category_name")
+	private String categoryName;
+
 }
