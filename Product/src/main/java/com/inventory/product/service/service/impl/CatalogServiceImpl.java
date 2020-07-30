@@ -38,6 +38,9 @@ public class CatalogServiceImpl implements CatalogService{
 	@Override
     public CatalogDTO addCatalog(Catalog catalog){
 		
+		catalog.setCreateDatetime(new java.util.Date());
+		catalog.setStatus("Active");
+		
 		return modelMapper.map(catalogRepository.save(catalog), CatalogDTO.class);
 		
     }
@@ -45,9 +48,12 @@ public class CatalogServiceImpl implements CatalogService{
 	@Override
     public CatalogDTO updateCatalog(Catalog catalog){
 		
+		
 		Catalog catalogToUpdate = catalogRepository.findById(catalog.getCatalogId()).get();
 		
 		catalogToUpdate.setCatalogName(catalog.getCatalogName());
+		catalogToUpdate.setDescription(catalog.getDescription());
+		//catalogToUpdate.setCatalogImage(null);
 		
 		return modelMapper.map(catalogRepository.save(catalogToUpdate), CatalogDTO.class);
     }
