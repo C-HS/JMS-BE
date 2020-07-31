@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -20,22 +19,19 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "Catalog")
-public class Catalog {
-    @Id
+@Table(name = "ProductAttribute")
+public class ProductAttribute {
+	
+	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "catalog_id")
-	private long catalogId;
-    
-	@Column(name = "catalog_name")
-	private String catalogName;
+	@Column(name = "attribute_id")
+	private long attributeId;
 	
-	@Column(name = "catalog_image")
-	@Lob
-	private byte[] catalogImage;
+	@Column(name = "attribute_name")
+	private String attributeName;
 	
-	@Column(name = "description")
-	private String description;
+	@Column(name = "uom")
+	private long uom;
 	
 	@Column(name = "create_datetime")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -43,5 +39,5 @@ public class Catalog {
 	
 	@Column(name = "status")
 	private String status;
-    
+
 }

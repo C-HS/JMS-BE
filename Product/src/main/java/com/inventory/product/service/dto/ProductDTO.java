@@ -11,6 +11,7 @@ import lombok.ToString;
 @ToString
 public class ProductDTO {
 	private long productId;
+	private long parentProductId;
 	private String productName;
 	private String productType;
 	private byte[] productImage;
