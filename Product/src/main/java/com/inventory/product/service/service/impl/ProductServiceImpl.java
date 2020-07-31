@@ -41,10 +41,30 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public ProductDTO updateProduct(Product product) {
 		Product productToUpdate = productRepository.findById(product.getProductId()).get();
-		productToUpdate.setProductCost(product.getProductCost());
 		productToUpdate.setProductName(product.getProductName());
-		productToUpdate.setProductPrice(product.getProductPrice());
-		productToUpdate.setProductTax(product.getProductTax());
+		productToUpdate.setProductType(product.getProductType());
+		productToUpdate.setProductImage(product.getProductImage());
+		productToUpdate.setCanBeSold(product.getCanBeSold());
+		productToUpdate.setCanBePurchased(product.getCanBePurchased());
+		productToUpdate.setCanBeManufactured(product.getCanBeManufactured());
+		productToUpdate.setTraceability(product.getTraceability());
+		productToUpdate.setInternalReference(product.getInternalReference());
+		productToUpdate.setCategoryId(product.getCategoryId());
+		productToUpdate.setHsnCode(product.getHsnCode());
+		productToUpdate.setHsnDescription(product.getHsnDescription());
+		productToUpdate.setSalesPrice(product.getSalesPrice());
+		productToUpdate.setSalesCurrency(product.getSalesCurrency());
+		productToUpdate.setCostPrice(product.getCostPrice());
+		productToUpdate.setCostCurrency(product.getCostCurrency());
+		productToUpdate.setUom(product.getUom());
+		productToUpdate.setCompanyId(product.getCompanyId());
+		productToUpdate.setWeight(product.getWeight());
+		
+		productToUpdate.setDescription(product.getDescription());
+		productToUpdate.setCreateDatetime(product.getCreateDatetime());
+		productToUpdate.setStatus(product.getStatus());
+		
+		
 		return modelMapper.map(productRepository.save(productToUpdate), ProductDTO.class);
 	}
 

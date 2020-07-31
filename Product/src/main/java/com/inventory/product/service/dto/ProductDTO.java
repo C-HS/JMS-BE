@@ -12,7 +12,24 @@ import lombok.ToString;
 public class ProductDTO {
 	private long productId;
 	private String productName;
-	private double productCost;
-	private double productPrice;
-	private double productTax;
+	private String productType;
+	private byte[] productImage;
+	private int canBeSold;
+	private int canBePurchased;
+	private int canBeManufactured;
+	private String traceability;
+	private String internalReference;
+	private long categoryId;
+	private String hsnCode;
+	private String hsnDescription;
+	private double salesPrice;
+	private String salesCurrency;
+	private double costPrice;
+	private String costCurrency;
+	private String uom;
+	private long companyId;
+	private String weight;
+	private String description;
+	private java.util.Date createDatetime;
+	private String status;
 }
