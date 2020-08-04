@@ -16,9 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.inventory.product.service.dto.CatalogDTO;
-import com.inventory.product.service.dto.ProductDTO;
 import com.inventory.product.service.model.Catalog;
-import com.inventory.product.service.model.Product;
 import com.inventory.product.service.service.CatalogService;
 
 @RestController
