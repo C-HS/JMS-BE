@@ -15,10 +15,11 @@ public class CategoryDTO {
 	
 	private long categoryId;
 	private String categoryName;
-	private long catalogId;
+//	private long catalogId;
 	private byte[] categoryImage;
 	private String description;
 	private java.util.Date createDatetime;
 	private String status;
+	private Catalog catalog;
 
 }

@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -27,11 +29,11 @@ public class AttributeValue {
 	@Column(name = "attribute_value_id")
 	private long attributeValueId;
     
-	@Column(name = "product_id")
-	private long productId;
-	
-	@Column(name = "attribute_id")
-	private long attributeId;
+//	@Column(name = "product_id")
+//	private long productId;
+//	
+//	@Column(name = "attribute_id")
+//	private long attributeId;
 	
 	@Column(name = "attribute_value")
 	private String attributeValue;
@@ -42,5 +44,13 @@ public class AttributeValue {
 	
 	@Column(name = "status")
 	private String status;
+	
+	@ManyToOne
+	@JoinColumn(name = "product_id")
+	private Product product;
+	
+	@ManyToOne
+	@JoinColumn(name = "attribute_id")
+	private ProductAttribute productAttribute;
 
 }

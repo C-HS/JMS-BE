@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -27,8 +29,8 @@ public class CompanyContact {
 	@Column(name = "company_contact_id")
 	private long companyContactId;
 	
-	@Column(name = "company_id")
-	private long companyId;
+//	@Column(name = "company_id")
+//	private long companyId;
 	
 	@Column(name = "contact_type")
 	private String contactType;
@@ -75,5 +77,9 @@ public class CompanyContact {
 	
 	@Column(name = "status")
 	private String status;
+	
+	@ManyToOne
+	@JoinColumn(name = "company_id")
+	private Company company;
 
 }

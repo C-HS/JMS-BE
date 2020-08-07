@@ -50,7 +50,7 @@ public class ProductServiceImpl implements ProductService {
 		productToUpdate.setCanBeManufactured(product.getCanBeManufactured());
 		productToUpdate.setTraceability(product.getTraceability());
 		productToUpdate.setInternalReference(product.getInternalReference());
-		productToUpdate.setCategoryId(product.getCategoryId());
+		productToUpdate.setCategory(product.getCategory());
 		productToUpdate.setHsnCode(product.getHsnCode());
 		productToUpdate.setHsnDescription(product.getHsnDescription());
 		productToUpdate.setSalesPrice(product.getSalesPrice());

@@ -54,7 +54,7 @@ Logger logger = LoggerFactory.getLogger(ProductVendorServiceImpl.class);
 
 		ProductVendor productVendorToUpdate = productVendorRepository.findById(productVendor.getProductVendorId()).get();
 		
-		productVendorToUpdate.setProductId(productVendor.getProductId());
+		productVendorToUpdate.setProduct(productVendor.getProduct());
 		productVendorToUpdate.setVendorId(productVendor.getVendorId());
 		productVendorToUpdate.setCostPrice(productVendor.getCostPrice());
 		productVendorToUpdate.setCurrencyId(productVendor.getCurrencyId());

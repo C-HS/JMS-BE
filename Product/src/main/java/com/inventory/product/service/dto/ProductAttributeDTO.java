@@ -15,7 +15,7 @@ public class ProductAttributeDTO {
 	
 	private String attributeName;
 	
-	private long uom;
+	private String uom;
 
 	private java.util.Date createDatetime;
 	

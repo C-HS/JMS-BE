@@ -52,7 +52,7 @@ public class ProductSalesTaxServiceImpl implements ProductSalesTaxService{
 
 		ProductSalesTax productSalesTaxToUpdate = productSalesTaxRepository.findById(productSalesTax.getProductSalesTaxId()).get();
 		
-		productSalesTaxToUpdate.setProductId(productSalesTax.getProductId());
+		productSalesTaxToUpdate.setProduct(productSalesTax.getProduct());
 		productSalesTaxToUpdate.setTaxId(productSalesTax.getTaxId());
 
 		return modelMapper.map(productSalesTaxRepository.save(productSalesTaxToUpdate), ProductSalesTaxDTO.class);

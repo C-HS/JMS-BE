@@ -1,5 +1,7 @@
 package com.inventory.product.service.dto;
 
+import com.inventory.product.service.model.Company;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,7 +15,7 @@ public class CompanyContactDTO {
 	
 	private long companyContactId;
 	
-	private long companyId;
+//	private long companyId;
 	
 	private String contactType;
 	
@@ -44,5 +46,7 @@ public class CompanyContactDTO {
 	private java.util.Date createDatetime;
 	
 	private String status;
+	
+	private Company company;
 
 }

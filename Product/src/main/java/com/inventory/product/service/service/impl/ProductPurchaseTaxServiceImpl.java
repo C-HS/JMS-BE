@@ -51,7 +51,7 @@ public class ProductPurchaseTaxServiceImpl implements ProductPurchaseTaxService{
 
 		ProductPurchaseTax productPurchaseTaxToUpdate = productPurchaseTaxRepository.findById(productPurchaseTax.getProductPurchaseTaxId()).get();
 		
-		productPurchaseTaxToUpdate.setProductId(productPurchaseTax.getProductId());
+		productPurchaseTaxToUpdate.setProduct(productPurchaseTax.getProduct());
 		productPurchaseTaxToUpdate.setTaxId(productPurchaseTax.getTaxId());
 
 		return modelMapper.map(productPurchaseTaxRepository.save(productPurchaseTaxToUpdate), ProductPurchaseTaxDTO.class);

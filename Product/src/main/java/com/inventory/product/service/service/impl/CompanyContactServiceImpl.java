@@ -50,7 +50,7 @@ public class CompanyContactServiceImpl implements CompanyContactService{
 
 		CompanyContact companyContactToUpdate = companyContactRepository.findById(companyContact.getCompanyContactId()).get();
 		
-		companyContactToUpdate.setCompanyId(companyContact.getCompanyId());
+		companyContactToUpdate.setCompany(companyContact.getCompany());
 		companyContactToUpdate.setContactType(companyContact.getContactType());
 		companyContactToUpdate.setContactName(companyContact.getContactName());
 		companyContactToUpdate.setAddressLine1(companyContact.getAddressLine1());

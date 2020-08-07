@@ -1,5 +1,7 @@
 package com.inventory.product.service.dto;
 
+import com.inventory.product.service.model.Category;
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -20,7 +22,7 @@ public class ProductDTO {
 	private int canBeManufactured;
 	private String traceability;
 	private String internalReference;
-	private long categoryId;
+//	private long categoryId;
 	private String hsnCode;
 	private String hsnDescription;
 	private double salesPrice;
@@ -33,4 +35,5 @@ public class ProductDTO {
 	private String description;
 	private java.util.Date createDatetime;
 	private String status;
+	private Category category;
 }

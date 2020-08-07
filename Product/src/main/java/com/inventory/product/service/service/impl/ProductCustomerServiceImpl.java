@@ -52,7 +52,7 @@ Logger logger = LoggerFactory.getLogger(ProductCustomerServiceImpl.class);
 
 		ProductCustomer productCustomerToUpdate = productCustomerRepository.findById(productCustomer.getProductCustomerId()).get();
 		
-		productCustomerToUpdate.setProductId(productCustomer.getProductId());
+		productCustomerToUpdate.setProduct(productCustomer.getProduct());
 		productCustomerToUpdate.setCustomerId(productCustomer.getCustomerId());
 		productCustomerToUpdate.setSalesPrice(productCustomer.getSalesPrice());
 		productCustomerToUpdate.setCurrencyId(productCustomer.getCurrencyId());

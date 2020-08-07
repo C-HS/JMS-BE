@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -27,8 +29,8 @@ public class ProductCustomer {
 	@Column(name = "product_customer_id")
 	private long productCustomerId;
 	
-	@Column(name = "product_id")
-	private long productId;
+//	@Column(name = "product_id")
+//	private long productId;
 	
 	@Column(name = "customer_id")
 	private long customerId;
@@ -45,5 +47,9 @@ public class ProductCustomer {
 	
 	@Column(name = "status")
 	private String status;
+	
+	@ManyToOne
+	@JoinColumn(name = "product_id")
+	private Product product;
 
 }

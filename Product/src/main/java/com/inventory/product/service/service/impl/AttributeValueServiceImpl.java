@@ -50,8 +50,8 @@ public class AttributeValueServiceImpl implements AttributeValueService{
 		
 		AttributeValue attributeValueToUpdate = attributeValueRepository.findById(attributeValue.getAttributeValueId()).get();
 		
-		attributeValueToUpdate.setProductId(attributeValue.getProductId());
-		attributeValueToUpdate.setAttributeId(attributeValue.getAttributeId());
+		attributeValueToUpdate.setProduct(attributeValue.getProduct());
+		attributeValueToUpdate.setProductAttribute(attributeValue.getProductAttribute());
 		attributeValueToUpdate.setAttributeValue(attributeValue.getAttributeValue());
 		attributeValueToUpdate.setCreateDatetime(attributeValue.getCreateDatetime());
 		attributeValueToUpdate.setStatus(attributeValue.getStatus());
