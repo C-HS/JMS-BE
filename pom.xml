@@ -17,6 +17,8 @@
         <module>IMSDiscovery</module>
         <module>Gateway</module>
 	<module>Product</module>
+	<module>settings</module>
+	<module>inventory</module>
     </modules>
 
 </project>
