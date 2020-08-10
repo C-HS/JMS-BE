@@ -1,16 +1,12 @@
 package com.iaito.inventory.model;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -25,28 +21,19 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "InventoryItem")
-public class InventoryItem {
+@Table(name = "InventoryItemMove")
+public class InventoryItemMove {
 	
     @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "inventory_item_id")
-	private long inventoryItemId;
+	@Column(name = "inventory_item_move_id")
+	private long inventoryItemMoveId;
 
-	@Column(name = "facility_id")
-	private long facilityId;
+//	@Column(name = "inventory_item_id")
+//	private long inventoryItemId;
 	
-	@Column(name = "location_id")
-	private long locationId;
-	
-	@Column(name = "product_id")
-	private long productId;
-
-	@Column(name = "lot_no")
-	private String lotNo;
-	
-	@Column(name = "slno")
-	private long slno;
+	@Column(name = "operation_type")
+	private String operationType;
 	
 	@Column(name = "quantity")
 	private long quantity;
@@ -59,9 +46,6 @@ public class InventoryItem {
 	
 	@Column(name = "in_shipment")
 	private long inShipment;
-
-	@Column(name = "company_id")
-	private long companyId;
 	
 	@Column(name = "to_customer")
 	private long toCustomer;
@@ -72,20 +56,28 @@ public class InventoryItem {
 	@Column(name = "out_shipment")
 	private long outShipment;
 
-	@Column(name = "tid")
-	private String tid;
+	@Column(name = "from_facility")
+	private long fromFacility;
 	
-	@Column(name = "tagging_status")
-	private String taggingStatus;
+	@Column(name = "from_location")
+	private long fromLocation;
 	
-	@Column(name = "create_datetime")
+	@Column(name = "to_facility")
+	private long toFacility;
+	
+	@Column(name = "to_location")
+	private long toLocation;
+	
+	
+	@Column(name = "movement_datetime")
 	@Temporal(TemporalType.TIMESTAMP)
-	private java.util.Date createDatetime;
+	private java.util.Date movementDatetime;
 	
 	@Column(name = "status")
 	private String status;
 	
-	@OneToMany(mappedBy = "inventoryItem", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-	private List<InventoryItemMove> inventoryItemMoveList = new ArrayList<>();
+	@ManyToOne
+	@JoinColumn(name = "inventory_item_id")
+	private InventoryItem inventoryItem;
 
 }

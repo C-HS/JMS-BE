@@ -30,7 +30,7 @@ public class InventoryItemController {
 		return ResponseEntity.ok(inventoryItemService.getInventoryItemById(inventoryItemId));
 	}
 	@GetMapping(value = "/getAllInventoryItems", produces = "application/json")
-	public ResponseEntity<List<InventoryItemDTO>> inventoryItem() {
+	public ResponseEntity<List<InventoryItemDTO>> inventoryItems() {
 		return ResponseEntity.ok(inventoryItemService.getAllInventoryItems());
 	}
 	@PostMapping(value = "/addInventoryItem", consumes = "application/json", produces = "application/json")
