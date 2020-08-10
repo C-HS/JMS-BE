@@ -1,4 +1,4 @@
-package com.inventory.product.service;
+package com.iaito.accounting;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
@@ -8,13 +8,14 @@ import org.springframework.context.annotation.Bean;
 
 @EnableDiscoveryClient
 @SpringBootApplication
-public class ProductApplication {
+public class AccountingApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductApplication.class, args);
+		SpringApplication.run(AccountingApplication.class, args);
 	}
 	@Bean
 	public ModelMapper modelMapper() {
 		return new ModelMapper();
 	}
+
 }

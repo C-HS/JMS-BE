@@ -16,9 +16,12 @@
     <modules>
         <module>IMSDiscovery</module>
         <module>Gateway</module>
-	<module>Product</module>
-	<module>settings</module>
-	<module>inventory</module>
+        <module>Product</module>
+        <module>settings</module>
+        <module>inventory</module>
+        <module>accounting</module>
+        <module>ordermanagement</module>
+        <module>shipping</module>
     </modules>
 
 </project>

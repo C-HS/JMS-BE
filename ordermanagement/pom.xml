@@ -5,19 +5,19 @@
 	<!--<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.5.RELEASE</version>
-		<relativePath/>
-	</parent>-->
+		<version>2.3.2.RELEASE</version>
+		<relativePath/> 
+	</parent> -->
 	<parent>
 		<groupId>com.iaito</groupId>
 		<artifactId>JMSBE</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>com.inventory</groupId>
-	<artifactId>product</artifactId>
+	<groupId>com.iaito</groupId>
+	<artifactId>ordermanagement</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>product</name>
-	<description>Product Service for IMS</description>
+	<name>ordermanagement</name>
+	<description>Order Management for IMS</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -25,6 +25,10 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -45,11 +49,10 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		<!-- Lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<scope>provided</scope>
+			<optional>true</optional>
 		</dependency>
 		<!-- Model Mapper -->
 		<dependency>
@@ -74,18 +77,6 @@
 			</exclusions>
 		</dependency>
 	</dependencies>
-	
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-dependencies</artifactId>
-        <version>${spring-cloud.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
 
 	<build>
 		<plugins>
