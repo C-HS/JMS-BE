@@ -1,4 +1,4 @@
-package com.iaito.ordermanagement;
+package com.iaito.order;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.boot.SpringApplication;
