@@ -11,4 +11,5 @@ public interface CatalogService {
     public CatalogDTO addCatalog(Catalog catalog);
     public CatalogDTO updateCatalog(Catalog catalog);
     public void deleteCatalog(long catalogId);
+//    public CatalogDTO catalogByName(String catalogName);
 }

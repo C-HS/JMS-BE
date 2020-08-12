@@ -56,7 +56,7 @@ public class CatalogServiceImpl implements CatalogService{
 		Catalog catalogToUpdate = catalogRepository.findById(catalog.getCatalogId()).get();
 		
 		catalogToUpdate.setCatalogName(catalog.getCatalogName());
-		catalogToUpdate.setDescription(catalog.getDescription());
+		catalogToUpdate.setCatalogDesc(catalog.getCatalogDesc());
 		//catalogToUpdate.setCatalogImage(null);
 		
 		return modelMapper.map(catalogRepository.save(catalogToUpdate), CatalogDTO.class);
@@ -68,4 +68,11 @@ public class CatalogServiceImpl implements CatalogService{
 		catalogRepository.deleteById(catalogId);
 
     }
+//
+//	@Override
+//	public CatalogDTO catalogByName(String catalogName) {
+//		return modelMapper.map(catalogRepository.findCatalogByName(catalogName), CatalogDTO.class);
+//	}
+
+	
 }

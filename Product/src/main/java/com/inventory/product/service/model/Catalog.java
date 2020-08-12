@@ -38,10 +38,10 @@ public class Catalog {
 	
 	@Column(name = "catalog_image")
 	@Lob
-	private byte[] catalogImage;
+	private byte[] file;
 	
 	@Column(name = "description")
-	private String description;
+	private String catalogDesc;
 	
 	@Column(name = "create_datetime")
 	@Temporal(TemporalType.TIMESTAMP)

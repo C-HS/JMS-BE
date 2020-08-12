@@ -6,5 +6,5 @@ import com.inventory.product.service.model.Catalog;
 
 @Repository
 public interface CatalogRepository extends JpaRepository<Catalog, Long>  {
-    
+//	public Catalog findCatalogByName(String catalogName);
 }
