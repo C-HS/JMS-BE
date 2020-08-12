@@ -7,12 +7,14 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.iaito.accounting.dto.BillProductTaxDTO;
 import com.iaito.accounting.model.BillProductTax;
 import com.iaito.accounting.repository.BillProductTaxRepository;
 import com.iaito.accounting.service.BillProductTaxService;
 
+@Service
 public class BillProductTaxServiceImpl implements BillProductTaxService{
 	
 	Logger logger = LoggerFactory.getLogger(BillProductTaxServiceImpl.class);
