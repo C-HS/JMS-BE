@@ -52,7 +52,7 @@ public class OutgoingShipmentItemServiceImpl implements OutgoingShipmentItemServ
 	@Override
 	public OutgoingShipmentItemDTO updateOutgoingShipmentItem(OutgoingShipmentItem outgoingShipmentItem) {
 
-		OutgoingShipmentItem outgoingShipmentItemToUpdate = outgoingShipmentItemRepository.findById(outgoingShipmentItem.getOutgointShipmentItemId()).get();
+		OutgoingShipmentItem outgoingShipmentItemToUpdate = outgoingShipmentItemRepository.findById(outgoingShipmentItem.getOutgoingShipmentItemId()).get();
 		
 //		catalogToUpdate.setCatalogName(catalog.getCatalogName());
 //		catalogToUpdate.setDescription(catalog.getDescription());

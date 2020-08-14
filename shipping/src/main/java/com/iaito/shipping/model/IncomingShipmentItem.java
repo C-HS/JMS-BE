@@ -19,16 +19,16 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 @Entity
-@Table(name = "OutgoingShipmentItem")
-public class OutgoingShipmentItem {
+@Table(name = "IncomingShipmentItem")
+public class IncomingShipmentItem {
 	
     @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "outgoing_shipment_item_id")
-	private long outgoingShipmentItemId;
+	@Column(name = "incoming_shipment_item_id")
+	private long incomingShipmentItemId;
 
-	@Column(name = "outgoing_shipment_id")
-	private long outgoingShipmentId;
+	@Column(name = "incoming_shipment_id")
+	private long incomingShipmentId;
 
 	@Column(name = "product_id")
 	private long productId;
@@ -38,9 +38,6 @@ public class OutgoingShipmentItem {
     
 	@Column(name = "ordered_quantity")
 	private double orderedQuantity;
-	
-	@Column(name = "available_quantity")
-	private double availableQuantity;
 
 	@Column(name = "done_quantity")
 	private double doneQuantity;
