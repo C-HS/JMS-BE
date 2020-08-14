@@ -44,8 +44,8 @@ public class CatalogServiceImpl implements CatalogService{
 		
 		catalog.setCreateDatetime(new java.util.Date());
 		catalog.setStatus("Active");
-		
-		return modelMapper.map(catalogRepository.save(catalog), CatalogDTO.class);
+		Catalog cat = catalogRepository.save(catalog);
+		return modelMapper.map(cat, CatalogDTO.class);
 		
     }
 	

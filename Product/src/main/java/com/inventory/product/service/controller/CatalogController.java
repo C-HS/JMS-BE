@@ -35,11 +35,11 @@ public class CatalogController {
     
     @Autowired CatalogService catalogService;
     @PostMapping(value="/load", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public String load(@RequestParam("catalog") String catalog, @RequestParam("file") MultipartFile file) throws IOException {
+    public long load(@RequestParam("catalog") String catalog, @RequestParam("file") MultipartFile file) throws IOException {
     	Catalog cat = new ObjectMapper().readValue(catalog, Catalog.class);
     	cat.setFile(file.getBytes());
-    	catalogService.addCatalog(cat);
-    	return "Done";
+    	CatalogDTO savedCatalog = catalogService.addCatalog(cat);
+    	return savedCatalog.getCatalogId();
     }
     
 //    @PostMapping(value = "/save")
@@ -55,6 +55,10 @@ public class CatalogController {
 	public ResponseEntity<List<CatalogDTO>> catalogs() {
 		return ResponseEntity.ok(catalogService.getAllCatalog());
 	}
+    @GetMapping(value = "/getCatalogs", produces = "application/json")
+    public List<CatalogDTO> getCatalogs() {
+    	return catalogService.getAllCatalog();
+    }
     
     
     @GetMapping(value = "/getCatalog/{catalogId}", produces = "application/json")

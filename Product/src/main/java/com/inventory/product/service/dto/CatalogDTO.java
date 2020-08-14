@@ -1,5 +1,7 @@
 package com.inventory.product.service.dto;
 
+import lombok.AllArgsConstructor;
+
 //import java.util.ArrayList;
 //import java.util.List;
 //
@@ -13,6 +15,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class CatalogDTO {
     private long catalogId;
