@@ -31,9 +31,8 @@ import com.inventory.product.service.service.CatalogService;
 @RestController
 public class CatalogController {
     Logger logger = LoggerFactory.getLogger(CatalogController.class);
-    //implement all endpoints..
-    
     @Autowired CatalogService catalogService;
+    
     @PostMapping(value="/load", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public long load(@RequestParam("catalog") String catalog, @RequestParam("file") MultipartFile file) throws IOException {
     	Catalog cat = new ObjectMapper().readValue(catalog, Catalog.class);
@@ -42,24 +41,15 @@ public class CatalogController {
     	return savedCatalog.getCatalogId();
     }
     
-//    @PostMapping(value = "/save")
-//    public ResponseEntity<String> saveCatalog(@RequestPart("catalog") Catalog catalog, 
-//    						  @RequestPart("file") MultipartFile file) throws IOException {
-//    	catalog.setCatalogImage(file.getBytes());
-//    	catalogService.addCatalog(catalog);
-//    	logger.warn("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"+catalog);
-//    	return ResponseEntity.ok(catalog.getCatalogName());
-//    }
-    
     @GetMapping(value = "/getAllCatalogs", produces = "application/json")
 	public ResponseEntity<List<CatalogDTO>> catalogs() {
 		return ResponseEntity.ok(catalogService.getAllCatalog());
 	}
+    
     @GetMapping(value = "/getCatalogs", produces = "application/json")
     public List<CatalogDTO> getCatalogs() {
     	return catalogService.getAllCatalog();
     }
-    
     
     @GetMapping(value = "/getCatalog/{catalogId}", produces = "application/json")
 	public ResponseEntity<CatalogDTO> catalog(@PathVariable Long catalogId) {
@@ -81,5 +71,4 @@ public class CatalogController {
 		catalogService.deleteCatalog(catalogId);
 		return ResponseEntity.status(HttpStatus.OK).body("Record Deleted Successfully");
 	}
-    
 }
